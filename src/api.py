@@ -1,7 +1,8 @@
 import logging
 import sys
+from collections.abc import AsyncGenerator
 from contextlib import asynccontextmanager
-from typing import Annotated, AsyncGenerator
+from typing import Annotated
 
 import anyio
 from fastapi import FastAPI, Path
