@@ -1,0 +1,23 @@
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    command:
+      - "uv"
+      - "run"
+      - "fastapi"
+      - "dev"
+      - "api.py"
+      - "--host"
+      - "0::"
+    develop:
+      watch:
+        - action: sync
+          path: .
+          target: /app
+          ignore:
+            - .venv/
+        - action: rebuild
+          path: ./pyproject.toml
