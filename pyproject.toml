@@ -1,7 +1,7 @@
 [project]
 name = "webfib"
 version = "0.1.0"
-description = "Add your description here"
+description = "Web service for getting n Fibonacci numbers"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
@@ -10,7 +10,7 @@ dependencies = [
 
 
 [tool.uv]
-exclude-newer = "1 week"
+exclude-newer = "1 day"
 
 [dependency-groups]
 dev = [
