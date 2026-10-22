@@ -30,7 +30,7 @@ async def create_file(
     return StreamingResponse(
         stream_iterable(fibonacci(n)),
         media_type="application/json",
-        headers={"Cache-Control": "max-age=604800, stale-while-revalidate=86400"},
+        headers={"Cache-Control": "s-maxage=604800, stale-while-revalidate=86400"},
     )
 
 
